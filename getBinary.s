@@ -29,6 +29,7 @@ main:
 	movq	$0, %rax
 	call	printf
 	movb	value, %dl
+	notb	%dl /* could invert all the bits */
 	call	convert
 	
 	
