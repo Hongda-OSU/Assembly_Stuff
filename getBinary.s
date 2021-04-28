@@ -13,7 +13,7 @@ specifier:
 .data
 
 value:
-	.word 'A'
+	.byte 'A'
 
 .global convert
 	.type convert, @function
