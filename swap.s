@@ -61,7 +61,7 @@ swapAlt:
 	movq	(%rdi), %rdx 
 	movq	(%rsi), %rcx 
 	movq	%rcx, (%rdi) 
-	movq	%rdx, (%rci)
+	movq	%rdx, (%rsi)
 	
 	leave
 	ret
