@@ -13,7 +13,7 @@ specifier:
 .data
 
 value:
-	.byte 'A'
+	.byte 'A' /* 01000001 */
 
 .global convert
 	.type convert, @function
@@ -29,7 +29,7 @@ main:
 	movq	$0, %rax
 	call	printf
 	movb	value, %dl
-	notb	%dl /* could invert all the bits */
+	notb	%dl /* could invert all the bits: 10111110 */
 	call	convert
 	
 	
