@@ -18,7 +18,8 @@ value2:
 
 .global swap
 	.type swap, @function
-
+.global swapAlt
+	.type swapAlt, @function
 .global main
 	.type main, @function
 .text
@@ -54,3 +55,14 @@ swap:
 	ret
 	.size swap, .-swap
 	
+swapAlt:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	movq	(%rdi), %rdx 
+	movq	(%rsi), %rcx 
+	movq	%rcx, (%rdi) 
+	movq	%rdx, (%rci)
+	
+	leave
+	ret
+	.size swapAlt, .-swapAlt
